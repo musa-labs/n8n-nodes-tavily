@@ -19,7 +19,6 @@ export async function tavilyApiRequest(
 ) {
 	const credentials = await this.getCredentials('tavilyApi');
 	let apiURL = `https://api.tavily.com${resource}`;
-	// console.log(apiURL);
 
 	const options: IRequestOptions = {
 		headers: {
@@ -50,22 +49,6 @@ export async function tavilyApiRequest(
 			options,
 		);
 	} catch (error) {
-		// if (
-		// 	((error.message || '').toLowerCase().includes('bad request') ||
-		// 		(error.message || '').toLowerCase().includes('unknown error')) &&
-		// 	error.description
-		// ) {
-		// 	let updatedError;
-		// 	// Try to return the error prettier, otherwise return the original one replacing the message with the description
-		// 	try {
-		// 		updatedError = prepareApiError.call(this, error);
-		// 	} catch (e) {}
-
-		// 	if (updatedError) throw updatedError;
-
-		// 	error.message = error.description;
-		// 	error.description = '';
-		// }
 
 		throw error;
 	}

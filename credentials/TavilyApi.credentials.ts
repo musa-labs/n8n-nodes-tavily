@@ -41,43 +41,13 @@ export class TavilyApi implements ICredentialType {
 	};
 
 	test: ICredentialTestRequest = {
-		request: {
-			baseURL: 'https://api.tavily.com',
-			url: '/search',
-			method: 'POST',
-		},
-	};
+			request: {
+				baseURL: 'https://api.tavily.com',
+				url: '/search',
+				method: 'POST',
+				body: {
+					query: 'N8N hello world',
+				},
+			},
+		};
 }
-
-
-
-// curl -X POST https://api.tavily.com/search \
-//   -H "Content-Type: application/json" \
-//   -H "Authorization: Bearer tvly-YOUR_API_KEY" \
-//   -d '{"query": "Who is Leo Messi?"}'
-
-
-// export class TavilyApi implements ICredentialType {
-// 	name = 'tavilyApi';
-// 	displayName = 'Tavily API';
-// 	documentationUrl = 'https://docs.tavily.com/api-reference/introduction'; // :contentReference[oaicite:5]{index=5}
-
-// 	properties: INodeProperties[] = [
-// 		{
-// 			displayName: 'API Key',
-// 			name: 'Authorization',
-// 			type: 'string',
-// 			typeOptions: { password: true },
-// 			default: '',
-// 		},
-
-// 	];
-// 	authenticate: IAuthenticateGeneric = {
-// 		type: 'generic',
-// 		properties: {
-// 			headers: {
-// 				Authorization: '={{$credentials.Authorization}}'
-// 			}
-// 		}
-// 	}
-// }

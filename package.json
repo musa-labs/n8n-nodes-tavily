@@ -1,7 +1,7 @@
 {
   "name": "n8n-nodes-tavily",
   "version": "0.1.0",
-  "description": "",
+  "description": "Tavily is a search engine tailored for AI agents, delivering real-time, accurate results, intelligent query suggestions, and in-depth research capabilities.",
   "keywords": [
     "n8n-community-node-package"
   ],
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lukemilby/n8n-nodes-tavily.git"
+    "url": "https://github.com/musa-labs/n8n-nodes-tavily.git"
   },
   "main": "index.js",
   "scripts": {
