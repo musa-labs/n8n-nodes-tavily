@@ -41,7 +41,6 @@ export async function tavilyApiRequest(
 			delete options.body;
 		}
 
-		console.log(JSON.stringify(options));
 
 		return await this.helpers.requestWithAuthentication.call(
 			this,

@@ -36,7 +36,6 @@ export const description = updateDisplayOptions(displayOptions, properties);
 export async function execute(this: IExecuteFunctions, index: number) {
 	const query = this.getNodeParameter('query', index) as string;
 	const options = this.getNodeParameter('options', index) as IDataObject;
-	console.log(options);
 
 	const body: IDataObject = {
 		'query': query,
@@ -46,7 +45,6 @@ export async function execute(this: IExecuteFunctions, index: number) {
 	const endpoint = "/search";
 
 	const responseData = await tavilyApiRequest.call(this, 'POST', endpoint, body);
-	console.log(responseData);
 
 	return this.helpers.constructExecutionMetaData(
 		this.helpers.returnJsonArray(responseData as IDataObject[]),

@@ -8,7 +8,6 @@ import type {Tavily} from "./node.type";
 
 export async function router(this: IExecuteFunctions) {
 	const items = this.getInputData();
-	console.log(items);
 
 	const returnData: INodeExecutionData[] = [];
 
