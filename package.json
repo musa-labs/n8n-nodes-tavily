@@ -31,7 +31,7 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/tavily.credentials.js"
+      "dist/credentials/TavilyApi.credentials.js"
     ],
     "nodes": [
       "dist/nodes/Tavily/Tavily.node.js"
