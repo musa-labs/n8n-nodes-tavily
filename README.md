@@ -1,8 +1,8 @@
 # n8n-nodes-tavily
 
-This is an n8n community node. It lets you use _app/service name_ in your n8n workflows.
+This is an n8n community node. It lets you use Tavily in your n8n workflows.
 
-_App/service name_ is _one or two sentences describing the service this node integrates with_.
+Designed exclusively for AI agents, Tavily is a search engine providing real-time, accurate results and advanced research features.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 

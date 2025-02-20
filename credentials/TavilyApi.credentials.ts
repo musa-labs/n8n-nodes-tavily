@@ -4,6 +4,7 @@ import {
 	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
+	Icon,
 } from 'n8n-workflow';
 
 
@@ -14,6 +15,7 @@ export class TavilyApi implements ICredentialType {
 	// Replace with your own docs links when building your own nodes
 	documentationUrl =
 		'https://docs.tavily.com/docs/welcome';
+	icon: Icon = 'file:icons/img.svg';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'API Key',
