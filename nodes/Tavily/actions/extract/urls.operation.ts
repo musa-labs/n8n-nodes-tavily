@@ -12,7 +12,7 @@ export const properties: INodeProperties[] = [
 		type: 'string',
 		required: true,
 		default: '',
-		placeholder: 'e.g. N8N community nodes',
+		placeholder: 'e.g. https://google.com, https://tavily.com',
 	},
 	{
 		displayName: 'Options',
@@ -37,8 +37,11 @@ export async function execute(this: IExecuteFunctions, index: number) {
 	const urls = this.getNodeParameter('urls', index) as string;
 	const options = this.getNodeParameter('options', index) as IDataObject;
 
+
+	const urlArray = urls.split(',').map((url) => url.trim());
+
 	const body: IDataObject = {
-		'urls': urls,
+		'urls': urlArray,
 		...options,
 	};
 
